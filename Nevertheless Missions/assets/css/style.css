@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+/* ============
+common
+=============== */
+:root {
+    --primary-white: #fff;
+   --primary-beigebrown: #FFFAF0;
+    --primary-whitebrown: #A07C61;
+    --primary-black: #000;
+    --primary-grey: #525252;
+    --contentwidth: 91.4%;
+    --contentpadding: 4.2%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family:
+        'Noto Sans JP',
+        Arial,
+        sans-serif;
+    font-style: normal;
+    color: var(--primary-black);
+    background-color: var(--primary-white);
+    line-height: 1.5;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section{
+   padding: 60px 6%;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: 4vw;
+ line-height: 13vw;
+
+
+}
+
+button.learn-more {
+ width: 85vw;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 18vw;
+ height: 18vw;
+ background: #b39574;
+ border-radius: 9vw;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 1.3rem;
+ height: 0.2rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -1.8vw;
+ left: 4.5vw;
+ width: 3.5vw;
+ height: 3.5vw;
+ border-top: 0.2rem solid #fff;
+ border-right: 0.2rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 3vw 0;
+ margin: 0 0 0 4.9vw;
+ color: #282936;
+ 
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+
+ background: var(--primary-whitebrown);
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+/* End From Uiverse.io by cssbuttons-io */
+
+/* From Uiverse.io by talhabangyal */ 
+.btn-article {
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #b39574;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+}
+
+.btn-article:hover {
+  background: #A07C61;
+}
+
+.text {
+  color: #fff;
+}
+
+.btn-article > .icon {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-article:hover .icon {
+  transform: translateX(5px);
+}
+
+.btn-article :active {
+  transform: scale(0.95);
+}
+
+.btn-article.contact{
+  font-size: 1.8rem;
+}
+
+
+
+/* ================
+header
+=============== */
+/* sp */
+.Nlogo {
+  width: 16%;
+  height: auto;
+  display: block;
+ 
+}
+
+.header{
+    padding: 20px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__topic{
+  margin: 0;
+}
+
+
+/* nav */
+.nav{
+    background: var(--primary-beigebrown);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+
+}
+
+.nav__header{
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+.nav__list{
+   padding: 0 6%;
+}
+.nav__item{
+    color: var(--primary-black);
+    font-size: 2rem;
+    line-height: 1; 
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    
+   
+}
+
+
+.nav.active{
+    transform: translate(0)
+}
+
+
+.nav__item a {
+    color: var(--primary-black);
+    text-decoration: none;
+}
+
+.nav__item a :hover {
+    color: #a0a0a0;
+   
+}
+/* header sp */
+
+/* ================
+MainVisual
+=============== */
+/* sp */
+
+.logo__sp{
+  width: 100%;
+}
+.logo__pc{
+  display: none;
+}
+
+.mainVisual {
+  position: relative;
+  overflow: hidden;
+}
+
+.mainVisual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+}
+
+
+/* テキスト */
+.hero-text {
+  position: relative;
+  text-align: center;
+  max-width: 600px;
+  padding: 90px 11%;
+  z-index: 2;
+  color: #603D22;
+}
+
+.hero-text h1 {
+  font-size: 7vw;
+  margin-bottom: 50px;
+  font-weight: 300;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  text-align: left;
+
+}
+
+.hero-text p {
+  font-size: 4vw;
+  font-weight: 200;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.hero-leadfirst{
+  text-align: left;
+  margin: 0 0 15px 0;
+}
+
+.hero-leadsecond{
+  text-align: left;
+  margin: 0;
+}
+
+.hero-leadsecondbr{
+  text-align: right;
+  margin: 0;
+}
+/* フレーム */
+.frame {
+  position: absolute;
+  inset: 40px 6%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.corner {
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 1 / 1;
+  color: #603D22;
+  border: 3px solid ;
+}
+
+.tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+.tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+.bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+.br { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+
+/* ================
+人生について考えよう
+=================== */
+.section--life{
+  padding: 60px 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  text-align: center;      
+  gap: 80px;  
+  
+}
+
+.life__sp{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.life__pc{
+  display: none;
+}
+
+.lifecaption{
+  font-size: 4vw;
+  color: var(--primary-grey) ;
+}
+
+/* ============== 
+Q and A
+================= */
+
+.section--qanda{
+  background-color: var(--primary-beigebrown);
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  text-align: center;
+}
